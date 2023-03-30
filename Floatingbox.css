@@ -1,0 +1,76 @@
+#main-div {
+    width: 400px;
+    height: 400px;
+    margin: 200px auto;
+    perspective: 800px;
+}
+
+#box-div {
+    width: 400px;
+    transform-style: preserve-3d;
+    animation: rotate 15s linear infinite;
+}
+
+#box-div div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    color: white;
+}
+
+#front-div {
+    transform: translateZ(200px);
+    background: black;
+    background-image: url(../images/sunrises.jpg);
+    background-size: cover;
+}
+
+
+#back-div {
+    transform: rotateY(180deg) translateZ(200px);
+    background: #101010;
+    background-image: url(../images/Sunset.jpg);
+    background-size: cover;
+}
+
+#left-div {
+    transform: rotateY(-90deg) translateX(-200px);
+    transform-origin: left;
+    background: black;
+    background-image: url(../images/midday.jpg);
+    background-size: cover;
+}
+
+#right-div {
+    transform: rotateY(90deg) translateX(200px);
+    transform-origin: right;
+    background: #101010;
+    background-image: url(../images/night.jpg);
+    background-size: cover;
+}
+
+#top-div {
+    transform: rotateX(-90deg) translateY(-200px);
+    transform-origin: top;
+    background: black;
+
+}
+
+#bottom-div {
+    transform: rotateX(90deg) translateY(200px);
+    transform-origin: bottom;
+    background: #101010;
+    box-shadow: 0px 0px 13px 7px #020202;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
